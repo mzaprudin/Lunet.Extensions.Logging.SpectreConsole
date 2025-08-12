@@ -44,6 +44,24 @@
                 "reveal": "silent"
             },
             "problemMatcher": "$msCompile"
+        },
+		{
+            "label": "Pack Release",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "pack",
+                "${workspaceFolder}/src/Pepelax.Extensions.Logging.SpectreConsole/Pepelax.Extensions.Logging.SpectreConsole.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary;ForceNoAlign",
+                "-c",
+                "Release"
+            ],
+            "group": "build",
+            "presentation": {
+                "reveal": "silent"
+            },
+            "problemMatcher": "$msCompile"
         }
 	]
 }

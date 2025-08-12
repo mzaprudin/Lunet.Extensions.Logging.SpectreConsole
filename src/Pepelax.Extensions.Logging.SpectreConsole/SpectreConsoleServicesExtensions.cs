@@ -61,6 +61,8 @@ public static class SpectreConsoleServicesExtensions
         [CallerMemberName] string pCaller = "",
         [CallerFilePath] string pFile = "")
     {
+        if (!pLog.IsEnabled(pLevel)) return;
+        
         var p = Path.GetFileName(pFile);
 
         var args = (pArgs is null) ? [] : pArgs;
